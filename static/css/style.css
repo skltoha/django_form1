@@ -1,0 +1,94 @@
+:root {
+  --menu-color: rgb(69, 81, 92);
+  --menu-hover-color: rgb(34, 47, 60);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+li {
+}
+a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: var(--menu-color);
+  border-radius: 10px;
+  transition: 0.5s;
+  color: #fff;
+}
+a:hover {
+  background-color: var(--menu-hover-color);
+  box-shadow: 5px 5px 10px rgb(180, 177, 177);
+}
+header {
+  margin-bottom: 20px;
+}
+.container {
+  --max-weight: 1148px;
+  --padding: 2rem;
+  width: min(var(--max-weight), 100% - var(--padding));
+  margin-inline: auto;
+}
+
+.entry-form {
+  --max-weight: 600px;
+  --padding: 2rem;
+  width: min(var(--max-weight), 100% - var(--padding));
+  /* width: 200px; */
+  margin-inline: auto;
+  color: #fff;
+  background-color: var(--menu-color);
+  box-shadow: 5px 5px 15px rgb(180, 177, 177);
+  padding: 30px 20px 20px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.entry-form h1 {
+  text-transform: capitalize;
+  font-size: 40px;
+}
+.entry-form:hover {
+  background-color: var(--menu-hover-color);
+  box-shadow: 10px 10px 20px rgb(180, 177, 177);
+  border-radius: 20px;
+}
+.entry-form:hover input[type="submit"] {
+  border: 1px solid #fff;
+  opacity: 0.6;
+}
+
+.input-section {
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+}
+input::placeholder {
+  color: red;
+  opacity: 0.6;
+}
+input[type="submit"] {
+  background-color: rgb(32, 54, 74);
+  border: none;
+  margin-top: 10px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(6, 37, 66);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  opacity: 1;
+}
