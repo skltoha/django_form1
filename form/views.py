@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import studeninfo
 
 # Create your views here.
@@ -19,6 +19,7 @@ def recordData(request):
 def saveData(request):
     if request.method == "POST":
         stuID = request.POST.get('stdID')
+
         if studeninfo.objects.filter(stu_id=stuID).exists():
             msg = f'{stuID} this id already in system'
             return render(request, 'records.html', {'msg': msg})
