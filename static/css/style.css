@@ -57,8 +57,7 @@ header {
   border-radius: 20px;
 }
 .entry-form:hover input[type="submit"] {
-  border: 1px solid #fff;
-  opacity: 0.6;
+  border: 1px solid #ffffffa7;
 }
 
 .input-section {
@@ -84,6 +83,7 @@ input[type="submit"] {
   margin-top: 10px;
   text-transform: uppercase;
   transition: 0.5s;
+  color: #fff;
 }
 
 input[type="submit"]:hover {
