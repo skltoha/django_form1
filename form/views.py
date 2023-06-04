@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import studeninfo
 
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -12,7 +13,9 @@ def formEntry(request):
 
 def recordData(request):
     data = studeninfo.objects.all()[0:]
+    msg = f'all system record'
     content = {
+        'msg': msg,
         'data': data
     }
     return render(request, 'records.html', content)
@@ -23,7 +26,7 @@ def saveData(request):
         stuID = request.POST.get('stdID')
 
         if studeninfo.objects.filter(stu_id=stuID).exists():
-            msg = f'{stuID} this id already in system'
+            msg = f'{stuID} already in system'
             data = studeninfo.objects.all()[0:]
             content = {
                 'msg': msg,
@@ -41,7 +44,7 @@ def saveData(request):
 
             studeninfo.objects.create(stu_id=stuID, stu_name=stdName, stu_dob=stdDOB,
                                       stu_address=stdAdd, stu_phone=stdPhone, stu_em_phone=stdEmPhone, stu_class=stdClass)
-            msg = f'{stuID} this id has been saved in system'
+            msg = f'{stuID}-{stdName} has been added in system'
             data = studeninfo.objects.all()[0:]
             content = {
                 'msg': msg,
