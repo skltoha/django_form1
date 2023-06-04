@@ -13,7 +13,7 @@ def formEntry(request):
 
 def recordData(request):
     data = studeninfo.objects.all()[0:]
-    msg = f'all system record'
+    msg = f'all saved record from system'
     content = {
         'msg': msg,
         'data': data

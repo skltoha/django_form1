@@ -2,7 +2,7 @@
 
 <div class="table-header">
   <h2>{{ msg }}</h2>
-  <hr>
+  <hr />
   <table>
     <thead>
       <th>ID</th>
@@ -13,9 +13,10 @@
       <th>Em Phone</th>
       <th>Class</th>
     </thead>
+
     {% for x in data %}
     <tbody>
-      <td>{{x.stu_id}}</td>
+      <td><a href="{% url 'home' %}">SID--{{x.stu_id}} </a></td>
       <td>{{x.stu_name}}</td>
       <td>{{x.stu_dob}}</td>
       <td>{{x.stu_address}}</td>

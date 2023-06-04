@@ -1,6 +1,33 @@
 :root {
   --menu-color: rgb(69, 81, 92);
   --menu-hover-color: rgb(34, 47, 60);
+  --header-color: rgb(2, 77, 77);
+  --nav-bg-color: rgb(3, 153, 153);
+}
+
+/* base html design start*/
+body {
+  margin: 0;
+}
+header {
+  position: sticky;
+}
+
+.header-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 60px;
+  background-color: var(--header-color);
+  color: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 50px;
+  background-color: var(--nav-bg-color);
 }
 
 ul {
@@ -12,7 +39,7 @@ ul {
 }
 li {
 }
-a {
+ul > li > a {
   text-decoration: none;
   padding: 10px 20px;
   background-color: var(--menu-color);
@@ -20,13 +47,12 @@ a {
   transition: 0.5s;
   color: #fff;
 }
-a:hover {
+ul > li > a:hover {
   background-color: var(--menu-hover-color);
-  box-shadow: 5px 5px 10px rgb(180, 177, 177);
+  box-shadow: 0px 0px 15px rgb(217, 217, 217);
 }
-header {
-  margin-bottom: 20px;
-}
+/* base html design end */
+
 .container {
   --max-weight: 1148px;
   --padding: 2rem;
@@ -46,6 +72,7 @@ header {
   padding: 30px 20px 20px;
   transition: 0.5s;
   border-radius: 5px;
+  margin-top: 20px;
 }
 .entry-form h1 {
   text-transform: capitalize;
@@ -97,6 +124,7 @@ input[type="submit"]:hover {
   --padding: 2rem;
   width: min(var(--max-width), 100% - var(--padding));
   margin-inline: auto;
+  margin-top: 20px;
 }
 .table-header h2 {
   text-transform: capitalize;
@@ -110,9 +138,20 @@ td {
   text-align: left;
   border-bottom: 1pt solid #000;
 }
-
+td > a:hover {
+  background-color: transparent;
+}
+th {
+  background-color: var(--header-color);
+  height: 30px;
+  color: #fff;
+}
+tbody:hover {
+  background-color: var(--nav-bg-color);
+  cursor: pointer;
+}
 th:nth-child(1) {
-  width: 50px;
+  width: 70px;
 }
 .tm-hero img {
   max-width: 100%;
