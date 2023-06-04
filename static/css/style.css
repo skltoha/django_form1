@@ -105,3 +105,8 @@ td {
   text-align: left;
   border-bottom: 1pt solid #000;
 }
+
+.tm-hero img {
+  max-width: 100%;
+  height: auto;
+}

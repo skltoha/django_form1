@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% block title %}Home{% endblock title %} {% block templates %}
+{% extends 'base.html' %} {% load static %} {% block title %}Home{% endblock title %} {% block templates %}
 
-<div class="container">
-  <h1>Home</h1>
+<div class="tm-hero">
+  <img src="{% static 'images/hero.jpg' %}" alt="" />
 </div>
 
 {% endblock templates %}
