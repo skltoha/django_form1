@@ -14,11 +14,13 @@ def formEntry(request):
 def recordData(request):
     data = studeninfo.objects.all()[0:]
     msg = f'all saved record from system'
-    content = {
+    row_count = len(data)
+    context = {
         'msg': msg,
-        'data': data
+        'data': data,
+        'trow': row_count
     }
-    return render(request, 'records.html', content)
+    return render(request, 'records.html', context)
 
 
 def saveData(request):
@@ -28,11 +30,13 @@ def saveData(request):
         if studeninfo.objects.filter(stu_id=stuID).exists():
             msg = f'{stuID} already in system'
             data = studeninfo.objects.all()[0:]
-            content = {
+            row_count = len(data)
+            context = {
                 'msg': msg,
-                'data': data
+                'data': data,
+                'trow': row_count
             }
-            return render(request, 'records.html', content)
+            return render(request, 'records.html', context)
         else:
             stuID = request.POST.get('stdID')
             stdName = request.POST.get('stdName')
@@ -46,11 +50,13 @@ def saveData(request):
                                       stu_address=stdAdd, stu_phone=stdPhone, stu_em_phone=stdEmPhone, stu_class=stdClass)
             msg = f'{stuID}-{stdName} has been added in system'
             data = studeninfo.objects.all()[0:]
-            content = {
+            row_count = len(data)
+            context = {
                 'msg': msg,
-                'data': data
+                'data': data,
+                'trow': row_count
             }
-            return render(request, 'records.html', content)
+            return render(request, 'records.html', context)
 
 
 def userinfo(request, stdid):

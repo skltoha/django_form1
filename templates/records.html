@@ -5,6 +5,7 @@
   <hr />
   <table>
     <thead>
+      <th>SL</th>
       <th>ID</th>
       <th>Name</th>
       <th>Address</th>
@@ -13,6 +14,7 @@
     </thead>
     {% for x in data %}
     <tbody>
+      <td>{{ forloop.counter }}</td>
       <td><a href="{% url 'userinfo' stdid=x.stu_id %}">SID--{{x.stu_id}} </a></td>
       <td>{{x.stu_name}}</td>
       <td>{{x.stu_address}}</td>
@@ -21,5 +23,6 @@
     </tbody>
     {% endfor %}
   </table>
+  <p>Total Records: {{ trow }}</p>
 </div>
 {% endblock templates %}

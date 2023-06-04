@@ -149,11 +149,13 @@ th {
   height: 30px;
   color: #fff;
 }
+
 tbody:hover {
   background-color: var(--nav-bg-color);
   cursor: pointer;
 }
-th:nth-child(1) {
+
+th:nth-child(2) {
   width: 90px;
 }
 .tm-hero img {
