@@ -53,5 +53,6 @@ def saveData(request):
             return render(request, 'records.html', content)
 
 
-def userinfo(request):
-    return render(request, 'userinfo.html')
+def userinfo(request, stdid):
+    usr = studeninfo.objects.get(stu_id=stdid)
+    return render(request, 'userinfo.html', {'usr': usr})

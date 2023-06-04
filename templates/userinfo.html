@@ -1,7 +1,63 @@
 {% extends 'base.html' %} {% block title %}UserInfo{% endblock title %} {% block templates %}
 
 <div class="container">
-  <p>{{ usr }}</p>
+  <div class="table">
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student No</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_id }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Name</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_name }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student DOB</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_dob }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Address</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_address }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Phone</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_phone }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Em Phone</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_em_phone }}</p>
+      </div>
+    </div>
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Class</h3>
+      </div>
+      <div class="table-details">
+        <p>{{ usr.stu_class }}</p>
+      </div>
+    </div>
+  </div>
 </div>
-
 {% endblock templates %}

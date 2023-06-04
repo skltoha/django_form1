@@ -7,5 +7,5 @@ urlpatterns = [
     path('form/', views.formEntry, name='form'),
     path('record/', views.recordData, name='record'),
     path('save/', views.saveData, name='save'),
-    path('userinfo/', views.userinfo, name='userinfo'),
+    path('userinfo/<int:stdid>', views.userinfo, name='userinfo'),
 ]

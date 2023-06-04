@@ -151,9 +151,29 @@ tbody:hover {
   cursor: pointer;
 }
 th:nth-child(1) {
-  width: 70px;
+  width: 90px;
 }
 .tm-hero img {
   max-width: 100%;
   height: auto;
+}
+
+.table-section {
+  --max-width: 700px;
+  --padding: 2rem;
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+  height: 30px;
+  display: flex;
+}
+
+.table-level {
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+.table-details {
+  width: 70%;
+  margin: 0;
+  padding: 0;
 }

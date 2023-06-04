@@ -7,20 +7,16 @@
     <thead>
       <th>ID</th>
       <th>Name</th>
-      <th>DOB</th>
       <th>Address</th>
       <th>Phone</th>
-      <th>Em Phone</th>
       <th>Class</th>
     </thead>
     {% for x in data %}
     <tbody>
-      <td><a href="{% url 'userinfo' %}">SID--{{x.stu_id}} </a></td>
+      <td><a href="{% url 'userinfo' stdid=x.stu_id %}">SID--{{x.stu_id}} </a></td>
       <td>{{x.stu_name}}</td>
-      <td>{{x.stu_dob}}</td>
       <td>{{x.stu_address}}</td>
       <td>{{x.stu_phone}}</td>
-      <td>{{x.stu_em_phone}}</td>
       <td>{{x.stu_class}}</td>
     </tbody>
     {% endfor %}
