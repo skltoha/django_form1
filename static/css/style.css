@@ -43,13 +43,13 @@ ul > li > a {
   text-decoration: none;
   padding: 10px 20px;
   background-color: var(--menu-color);
-  border-radius: 10px;
   transition: 0.5s;
   color: #fff;
 }
 ul > li > a:hover {
   background-color: var(--menu-hover-color);
   box-shadow: 0px 0px 15px rgb(217, 217, 217);
+  border-radius: 10px;
 }
 /* base html design end */
 

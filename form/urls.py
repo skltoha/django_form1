@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views 
+from . import views
 
 
 urlpatterns = [
@@ -7,4 +7,5 @@ urlpatterns = [
     path('form/', views.formEntry, name='form'),
     path('record/', views.recordData, name='record'),
     path('save/', views.saveData, name='save'),
+    path('userinfo/', views.userinfo, name='userinfo'),
 ]

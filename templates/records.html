@@ -13,10 +13,9 @@
       <th>Em Phone</th>
       <th>Class</th>
     </thead>
-
     {% for x in data %}
     <tbody>
-      <td><a href="{% url 'home' %}">SID--{{x.stu_id}} </a></td>
+      <td><a href="{% url 'userinfo' %}">SID--{{x.stu_id}} </a></td>
       <td>{{x.stu_name}}</td>
       <td>{{x.stu_dob}}</td>
       <td>{{x.stu_address}}</td>

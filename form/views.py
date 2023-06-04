@@ -51,3 +51,7 @@ def saveData(request):
                 'data': data
             }
             return render(request, 'records.html', content)
+
+
+def userinfo(request):
+    return render(request, 'userinfo.html')
