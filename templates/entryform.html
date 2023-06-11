@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block title %}Entry Form{% endblock title %} {% block templates %}
 <div class="container">
   <div class="entry-form">
-    <form action="{% url 'save' %}" method="POST">
+    <form action="{% url 'save' %}" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       <h1>Student entry form</h1>
       <div class="input-section">
@@ -37,6 +37,11 @@
       <div class="input-section">
         <label for="">Student class</label>
         <input type="text" name="stdClass" id="" placeholder="Student class" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student images</label>
+        <input type="file" name="stdImg" id="" />
       </div>
 
       <div class="input-section">

@@ -59,6 +59,16 @@
         <p>{{ usr.stu_class }}</p>
       </div>
     </div>
+    {% if usr.stu_img %}
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Student Images</h3>
+      </div>
+      <div class="table-details">
+        <img src="{{ usr.stu_img.url }}" alt="images" style="width: 200px; margin-top: 20px" />
+      </div>
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endblock templates %}

@@ -45,9 +45,10 @@ def saveData(request):
             stdPhone = request.POST.get('stdPhone')
             stdEmPhone = request.POST.get('stdEmPhone')
             stdClass = request.POST.get('stdClass')
+            stdImg = request.FILES.get('stdImg')
 
             studeninfo.objects.create(stu_id=stuID, stu_name=stdName, stu_dob=stdDOB,
-                                      stu_address=stdAdd, stu_phone=stdPhone, stu_em_phone=stdEmPhone, stu_class=stdClass)
+                                      stu_address=stdAdd, stu_phone=stdPhone, stu_em_phone=stdEmPhone, stu_class=stdClass, stu_img=stdImg)
             msg = f'{stuID}-{stdName} has been added in system'
             data = studeninfo.objects.all()[0:]
             row_count = len(data)
@@ -62,3 +63,8 @@ def saveData(request):
 def userinfo(request, stdid):
     usr = studeninfo.objects.get(stu_id=stdid)
     return render(request, 'userinfo.html', {'usr': usr})
+
+
+def userinfoedit(request, stdid):
+    usr = studeninfo.objects.get(stu_id=stdid)
+    return render(request, 'editform.html', {'usr': usr})
