@@ -11,4 +11,6 @@ urlpatterns = [
     path('save/', views.saveData, name='save'),
     path('userinfo/<int:stdid>', views.userinfo, name='userinfo'),
     path('userinfoedit/<int:stdid>', views.userinfoedit, name='userinfoedit'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
