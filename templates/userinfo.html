@@ -69,6 +69,14 @@
       </div>
     </div>
     {% endif %}
+    <div class="table-section">
+      <div class="table-level">
+        <h3>Action</h3>
+      </div>
+      <div class="table-details">
+        <a href="{% url 'userinfoedit' stdid=usr.stu_id %}">Edit</a> | <a href="#">Delete</a>
+      </div>
+    </div>
   </div>
 </div>
 {% endblock templates %}

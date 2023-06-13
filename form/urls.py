@@ -10,7 +10,9 @@ urlpatterns = [
     path('record/', views.recordData, name='record'),
     path('save/', views.saveData, name='save'),
     path('userinfo/<int:stdid>', views.userinfo, name='userinfo'),
-    path('userinfoedit/<int:stdid>', views.userinfoedit, name='userinfoedit'),
+    path('userinfoedit/<int:stdid>/', views.userinfoedit, name='userinfoedit'),
+    path('update/', views.userinfoedit, name='update'),
 ]
 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

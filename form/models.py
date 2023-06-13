@@ -11,3 +11,4 @@ class studeninfo(models.Model):
     stu_em_phone    = models.CharField(max_length=20)
     stu_class       = models.CharField(max_length=20)
     stu_img         = models.ImageField(null=True, blank=True, upload_to='images/')
+    

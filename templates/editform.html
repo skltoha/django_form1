@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% load static %} {% block title %}Entry Form{% endblock title %} {% block templates %}
+<div class="container">
+  <div class="entry-form">
+    <form action="{% url 'update' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1>Student entry form</h1>
+      {% if usr %}
+      <div class="input-section">
+        <label for="stid">Student ID</label>
+        <h3>{{ usr.stu_id }}</h3>
+      </div>
+
+      <div class="input-section">
+        <label for="">Student Name</label>
+        <input type="text" name="stdName" id="" required placeholder="Student Name" value="{{ usr.stu_name }}" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student DOB</label>
+        <input type="date" name="stdDOB" id="" required value="{{ usr.stu_dob }} " />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student Address</label>
+        <input type="text" name="stdAdd" id="" placeholder="Student Address" value="{{ usr.stu_address }}" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student Phone</label>
+        <input type="text" name="stdPhone" id="" required placeholder="Student Phone" value="{{ usr.stu_phone }}" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student emergency phone</label>
+        <input type="text" name="stdEmPhone" id="" placeholder="Student emergency phone" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student class</label>
+        <input type="text" name="stdClass" id="" placeholder="Student class" />
+      </div>
+
+      <div class="input-section">
+        <label for="">Student images</label>
+        <img style="width: 200px" src="{{ usr.stu_img.url }}" alt="" />
+        <input type="file" name="stdImg" id="" />
+      </div>
+      {% endif %}
+      <div class="input-section">
+        <input type="submit" name="submit" id="" />
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock templates %}

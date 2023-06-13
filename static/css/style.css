@@ -87,7 +87,20 @@ ul > li > a:hover {
   border: 1px solid #ffffffa7;
 }
 
-.input-section {
+.input-section h3 {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: auto;
 }
 
 input {
