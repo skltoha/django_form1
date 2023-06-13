@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import studeninfo
 
 
@@ -68,3 +68,23 @@ def userinfo(request, stdid):
 def userinfoedit(request, stdid):
     usr = studeninfo.objects.get(stu_id=stdid)
     return render(request, 'editform.html', {'usr': usr})
+
+
+def update(request, stdid):
+    if request.method == "POST":
+        stuID = request.POST.get('stdID')
+        stdName = request.POST.get('stdName')
+        stdDOB = request.POST.get('stdDOB')
+        stdAdd = request.POST.get('stdAdd')
+        stdPhone = request.POST.get('stdPhone')
+        stdEmPhone = request.POST.get('stdEmPhone')
+        stdClass = request.POST.get('stdClass')
+
+    
+    data = studeninfo.objects.all()[0:]
+    row_count = len(data)
+    context = {
+        'data': data,
+        'trow': row_count
+    }
+    return render(request, 'records.html', context)
