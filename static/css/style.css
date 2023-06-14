@@ -10,7 +10,6 @@ body {
   margin: 0;
 }
 header {
-  position: sticky;
 }
 h1,
 h2,
@@ -41,6 +40,7 @@ img {
   align-items: center;
   height: 50px;
   background-color: var(--nav-bg-color);
+  position: sticky;
 }
 
 ul {
@@ -215,13 +215,18 @@ th:nth-child(2) {
   display: flex;
   gap: 2%;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 .box {
-  width: 32%;
+  width: 31%;
+  margin-bottom: 10px;
+  border: 1px solid rgb(159, 156, 156);
 }
 .box-img {
 }
 .box-img img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }
 .box-text {
 }

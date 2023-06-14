@@ -24,7 +24,7 @@ def recordData(request):
 
 
 def allrecordData(request):
-    data = studeninfo.objects.all()[0:]
+    data = studeninfo.objects.all()[0:].order_by('stu_id')
     row_count = len(data)
     context = {
         'data': data,
@@ -103,7 +103,7 @@ def update(request, stdid):
 
 def delete(request, stdid):
     studeninfo.objects.get(stu_id=stdid).delete()
-    
+
     data = studeninfo.objects.all()[0:]
     msg = f'{stdid} has been deleted'
     row_count = len(data)
