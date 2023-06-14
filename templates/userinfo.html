@@ -74,7 +74,8 @@
         <h3>Action</h3>
       </div>
       <div class="table-details">
-        <a href="{% url 'userinfoedit' stdid=usr.stu_id %}">Edit</a> | <a href="#">Delete</a>
+        <a href="{% url 'userinfoedit' stdid=usr.stu_id %}">Edit</a> |
+        <a href="{% url 'delete' stdid=usr.stu_id %}">Delete</a>
       </div>
     </div>
   </div>

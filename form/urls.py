@@ -12,6 +12,7 @@ urlpatterns = [
     path('userinfo/<int:stdid>', views.userinfo, name='userinfo'),
     path('userinfoedit/<int:stdid>/', views.userinfoedit, name='userinfoedit'),
     path('update/<int:stdid>/', views.update, name='update'),
+    path('delete/<int:stdid>/', views.delete, name='delete'),
 ]
 
 

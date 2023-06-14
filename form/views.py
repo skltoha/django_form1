@@ -71,19 +71,34 @@ def userinfoedit(request, stdid):
 
 
 def update(request, stdid):
-    if request.method == "POST":
-        stuID = request.POST.get('stdID')
-        stdName = request.POST.get('stdName')
-        stdDOB = request.POST.get('stdDOB')
-        stdAdd = request.POST.get('stdAdd')
-        stdPhone = request.POST.get('stdPhone')
-        stdEmPhone = request.POST.get('stdEmPhone')
-        stdClass = request.POST.get('stdClass')
+    obj = get_object_or_404(studeninfo, stu_id=stdid)
+    obj.stu_name = request.POST.get('stdName')
+    # stdDOB = request.POST.get('stdDOB')
+    obj.stu_address = request.POST.get('stdAdd')
+    obj.stu_phone = request.POST.get('stdPhone')
+    obj.stu_em_phone = request.POST.get('stdEmPhone')
+    obj.stu_class = request.POST.get('stdClass')
+    obj.save()
 
-    
     data = studeninfo.objects.all()[0:]
+    msg = f'{stdid} has been updated'
     row_count = len(data)
     context = {
+        'msg': msg,
+        'data': data,
+        'trow': row_count
+    }
+    return render(request, 'records.html', context)
+
+
+def delete(request, stdid):
+    studeninfo.objects.get(stu_id=stdid).delete()
+    
+    data = studeninfo.objects.all()[0:]
+    msg = f'{stdid} has been deleted'
+    row_count = len(data)
+    context = {
+        'msg': msg,
         'data': data,
         'trow': row_count
     }
