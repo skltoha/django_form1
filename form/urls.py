@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('form/', views.formEntry, name='form'),
     path('record/', views.recordData, name='record'),
+    path('allrecord/', views.allrecordData, name='allrecord'),
     path('save/', views.saveData, name='save'),
     path('userinfo/<int:stdid>', views.userinfo, name='userinfo'),
     path('userinfoedit/<int:stdid>/', views.userinfoedit, name='userinfoedit'),

@@ -17,8 +17,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 .header-text {
   display: flex;
@@ -204,4 +210,18 @@ th:nth-child(2) {
   padding: 0;
   display: flex;
   align-items: center;
+}
+.box-area {
+  display: flex;
+  gap: 2%;
+  margin-top: 10px;
+}
+.box {
+  width: 32%;
+}
+.box-img {
+}
+.box-img img {
+}
+.box-text {
 }

@@ -23,6 +23,16 @@ def recordData(request):
     return render(request, 'records.html', context)
 
 
+def allrecordData(request):
+    data = studeninfo.objects.all()[0:]
+    row_count = len(data)
+    context = {
+        'data': data,
+        'trow': row_count
+    }
+    return render(request, 'allrecords.html', context)
+
+
 def saveData(request):
     if request.method == "POST":
         stuID = request.POST.get('stdID')
