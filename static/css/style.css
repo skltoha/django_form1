@@ -217,10 +217,14 @@ th:nth-child(2) {
   margin-top: 10px;
   flex-wrap: wrap;
 }
-.box {
-  width: 31%;
+.box-area a {
+  width: 30%;
   margin-bottom: 10px;
   border: 1px solid rgb(159, 156, 156);
+  text-decoration: none;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .box-img {
 }
@@ -229,4 +233,5 @@ th:nth-child(2) {
   object-fit: cover;
 }
 .box-text {
+  padding: 10px;
 }
