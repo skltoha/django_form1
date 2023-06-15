@@ -146,7 +146,7 @@ input[type="submit"]:hover {
 }
 
 .table-header {
-  --max-width: 700px;
+  --max-width: 900px;
   --padding: 2rem;
   width: min(var(--max-width), 100% - var(--padding));
   margin-inline: auto;
@@ -190,7 +190,7 @@ th:nth-child(2) {
 }
 
 .table-info {
-  --max-width: 700px;
+  --max-width: 900px;
   --padding: 2rem;
   width: min(var(--max-width), 100% - var(--padding));
   margin-inline: auto;
